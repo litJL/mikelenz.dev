@@ -2,7 +2,7 @@
     <div class="graph-paper min-h-screen overflow-x-hidden bg-gray-950">
         <section id="Home">
             <UContainer
-                class="group/bento pt-32"
+                class="group/bento py-32"
                 :ui="{ constrained: 'max-w-[96rem]' }"
             >
                 <!-- Bento Grid -->
@@ -18,7 +18,8 @@
                     >
                         <!-- 1 -->
                         <div
-                            class="animate__animated animate__backInDown b1 bento-card animate__slow animate__delay-1s center-card group z-10 flex flex-col items-center justify-between overflow-hidden"
+                            class="animate__animated animate__backInDown b1 bento-card center-card group z-10 flex flex-col items-center justify-between overflow-hidden"
+                            style="animation-delay: 0.8s"
                         >
                             <CenterSection />
                         </div>
@@ -112,23 +113,12 @@
                 </div>
             </UContainer>
         </section>
-        <section id="About">
-            <UContainer>
-                <UDivider
-                    icon="i-heroicons-chevron-down animate__animated animate__fadeInDown animate__slower animate__delay-1s"
-                    class="animate__animated animate__fadeInDown animate__delay-1s my-16"
-                />
-            </UContainer>
-        </section>
-        <section id="Projects"></section>
-        <section id="Contact"></section>
     </div>
 </template>
 
 <script lang="ts" setup>
 const { x, y } = useMouse();
 const { width, height } = useWindowSize();
-const hovered = ref(false);
 const cornerOffsetX = computed(() =>
     width.value > 1280 ? x.value / width.value : 0.5,
 );
@@ -141,7 +131,7 @@ const cornerOffsetY = computed(() =>
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(24, 64px);
+    grid-template-rows: repeat(21, 64px);
     grid-column-gap: 16px;
     grid-row-gap: 16px;
 }
@@ -152,17 +142,17 @@ const cornerOffsetY = computed(() =>
 .b2 {
     grid-area: 4 / 1 / 10 / 4;
 }
-.b3 {
+.b4 {
     grid-area: 10 / 1 / 13 / 4;
 }
-.b4 {
+.b6 {
     grid-area: 13 / 1 / 16 / 4;
 }
 .b5 {
-    grid-area: 16 / 1 / 22 / 4;
+    grid-area: 16 / 1 / 19 / 4;
 }
-.b6 {
-    grid-area: 22 / 1 / 25 / 4;
+.b3 {
+    grid-area: 19 / 1 / 22 / 4;
 }
 
 .bento-card {

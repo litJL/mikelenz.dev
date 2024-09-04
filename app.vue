@@ -1,6 +1,6 @@
 <template>
     <div class="group/main">
-        <div id="cursor" class="group-hover/main:bg-white rounded-full absolute top-0 left-0  z-[60] pointer-events-none -translate-x-1/2 -translate-y-1/2" ref="cursor"></div>
+        <div id="cursor" class="xl:group-hover/main:bg-white rounded-full absolute top-0 left-0  z-[60] pointer-events-none -translate-x-1/2 -translate-y-1/2" ref="cursor"></div>
         <NuxtLayout>
             <NuxtPage/>
         </NuxtLayout>
