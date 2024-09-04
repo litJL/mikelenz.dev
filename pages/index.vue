@@ -1,115 +1,226 @@
 <template>
-    <UContainer class="flex flex-col gap-8 pb-8">
-        <h1 class="mt-8 text-center text-3xl font-bold">Nuxt 3 Starter</h1>
-        <UDivider />
-        <UCard>
-            <template #header>
-                <h2 class="flex items-center gap-2 text-xl font-bold">
-                    <UIcon name="i-heroicons-moon-solid" class="size-6" />
-                    Dark mode works out of the box...
-                </h2>
-            </template>
-            <div class="flex items-center gap-2">
-                Try it out
-                <DarkModeSwitch />
-            </div>
-        </UCard>
-        <UCard>
-            <template #header>
-                <h2 class="flex items-center gap-2 text-xl font-bold">
-                    <UIcon
-                        name="i-heroicons-check-badge-solid"
-                        class="size-6"
-                    />
-                    ...as well as Nuxt UI
-                </h2>
-            </template>
-            <div class="flex items-center gap-2">
-                Any component with the 'U' prefix is part of Nuxt UI. Check out
-                the
-                <UButton
-                    to="https://ui.nuxt.com/getting-started"
-                    size="lg"
-                    target="_blank"
-                    trailing
-                    variant="outline"
-                    icon="i-heroicons-document-solid"
+    <div class="graph-paper min-h-screen overflow-x-hidden bg-gray-950">
+        <section id="Home">
+            <UContainer class="pt-32" :ui="{ constrained: 'max-w-[96rem]' }">
+                <!-- Bento Grid -->
+                <div
+                    class="animate__animated animate__fadeIn relative z-10 w-full xl:h-[800px]"
                 >
-                    documentation
-                </UButton>
-                for more information.
-            </div>
-        </UCard>
-        <UCard>
-            <template #header>
-                <h2 class="flex items-center gap-2 text-xl font-bold">
-                    <UIcon
-                        name="i-heroicons-chat-bubble-left-solid"
-                        class="size-6"
-                    />
-                    Lodash for javascript utilities
-                </h2>
-            </template>
-            <div>
-                Useful for things like debouncing, throttling, and more. Try it:
-                <div class="flex flex-col gap-2 mt-4">
-                    <UButton
-                        label="Click Me"
-                        class="w-24"
-                        block
-                        @click="debounceDemonstration"
-                    />
-                    <span>Clicks: {{ actualCounter }}</span>
-                    <span>Debounced Clicks: {{ debounceCounter }}</span>
+                    <!-- Actual Grid -->
+                    <div
+                        class="bento-grid grid h-full w-full place-content-center overflow-hidden rounded-lg bg-gray-900 p-4"
+                        :style="{
+                            transform: `translate(${5 - cornerOffsetX * 10}px, ${5 - cornerOffsetY * 10}px)`,
+                        }"
+                    >
+                        <!-- 1 -->
+                        <div
+                            class="animate__animated animate__fadeIn animate__delay-1s b1 bento-card group z-10 flex flex-col items-center justify-between overflow-hidden xl:hover:scale-150 xl:hover:shadow-2xl"
+                        >
+                            <!-- Top -->
+                            <div
+                                class="flex h-8 w-full items-center justify-end opacity-0 transition group-hover:opacity-100"
+                            ></div>
+                            <!-- Center -->
+                            <div class="flex items-center justify-center">
+                                <div
+                                    class="flex flex-col items-center justify-center border-0 border-gray-500 transition-all group-hover:border-r-2 group-hover:pr-4"
+                                >
+                                    <span class="text-4xl font-bold">
+                                        MIKE LENZ
+                                    </span>
+                                    <span class="font-light text-gray-400">
+                                        WEB DEVELOPER
+                                    </span>
+                                </div>
+                                <div
+                                    class="w-0 overflow-hidden opacity-0 transition-all group-hover:w-auto group-hover:pl-4 group-hover:opacity-100"
+                                >
+                                    <ul>
+                                        <li>
+                                            <span class="text-gray-400">
+                                                Age:
+                                            </span>
+                                            <b>23</b>
+                                        </li>
+                                        <li>
+                                            <span class="text-gray-400">
+                                                Nationality:
+                                            </span>
+                                            <b>German</b>
+                                        </li>
+                                        <li>
+                                            <span class="text-gray-400">
+                                                Framework:
+                                            </span>
+                                            <b>Vue</b>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Bottom -->
+                            <div
+                                class="flex h-8 w-full justify-end bg-gradient-to-r from-transparent to-white opacity-0 transition-opacity group-hover:opacity-100"
+                            >
+                                <UButton
+                                    label="Contact Me! &rarr;"
+                                    to="#Contact"
+                                    variant="link"
+                                    size="xs"
+                                    color="white"
+                                    class="text-black"
+                                />
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div
+                            class="animate__animated animate__fadeInLeft b2 bento-card"
+                            style="animation-delay: 1.2s"
+                        ></div>
+                        <!-- 3 -->
+                        <div
+                            class="animate__animated animate__fadeInRight b3 bento-card"
+                            style="animation-delay: 1.3s"
+                        ></div>
+                        <!-- 4 -->
+                        <div
+                            class="animate__animated animate__fadeInDown b4 bento-card"
+                            style="animation-delay: 1.4s"
+                        ></div>
+                        <!-- 5 -->
+                        <div
+                            class="animate__animated animate__fadeInUp b5 bento-card"
+                            style="animation-delay: 1.5s"
+                        ></div>
+                        <!-- 6 -->
+                        <div
+                            class="animate__animated animate__fadeInRight b6 bento-card"
+                            style="animation-delay: 1.6s"
+                        ></div>
+                    </div>
+                    <!-- Details -->
+                    <div
+                        class="absolute -left-2 -top-2 -z-10 size-32 rounded-tl-lg bg-white/10"
+                        :style="{
+                            transform: `translate(${10 - cornerOffsetX * 20}px, ${10 - cornerOffsetY * 20}px)`,
+                        }"
+                    ></div>
+                    <div
+                        class="absolute -right-2 -top-2 -z-10 size-32 rounded-tr-lg bg-white/10"
+                        :style="{
+                            transform: `translate(${10 - cornerOffsetX * 20}px, ${10 - cornerOffsetY * 20}px)`,
+                        }"
+                    ></div>
                 </div>
-            </div>
-        </UCard>
-        <UCard>
-            <template #header>
-                <h2 class="flex items-center gap-2 text-xl font-bold">
-                    <UIcon
-                        name="i-heroicons-plus-circle-solid"
-                        class="size-6"
-                    />
-                    VueUse for Vue utilities
-                </h2>
-            </template>
-            <div>
-                Useful for things like getting the mouse position and many more things Seriously, this provides a lot of utilities. Here's a demo:
-                <div>
-                    <span>x: {{ x }}</span>
-                    <span>y: {{ y }}</span>
+
+                <!-- Adornments -->
+                <div
+                    class="flex justify-between"
+                    :style="{
+                        transform: `translate(${5 - cornerOffsetX * 10}px, ${5 - cornerOffsetY * 10}px)`,
+                    }"
+                >
+                    <span
+                        class="animate__animated animate__fadeInLeft text-xs text-gray-600"
+                        style="animation-delay: 1s"
+                    >
+                        GRID :
+                        <b class="text-gray-300">BENTO ARRANGEMENT</b>
+                    </span>
+                    <span
+                        class="animate__animated animate__fadeInRight animate__delay-1s flex w-40 justify-between gap-2 text-xs text-gray-600"
+                        style="animation-delay: 1.1s"
+                    >
+                        POSITION :
+                        <div class="font-bold text-gray-300">
+                            {{ x }}.0, {{ y }}.0
+                        </div>
+                    </span>
                 </div>
-            </div>
-        </UCard>
-        <UCard>
-            <template #header>
-                <h2 class="flex items-center gap-2 text-xl font-bold">
-                    <UIcon
-                        name="i-heroicons-language-solid"
-                        class="size-6"
-                    />
-                    i18n for internationalization
-                </h2>
-            </template>
-            <div>
-                {{ $t('i18n_demonstration') }}
-            </div>
-        </UCard>
-    </UContainer>
+            </UContainer>
+        </section>
+        <section id="About">
+            <UContainer>
+                <UDivider
+                    icon="i-heroicons-chevron-down animate__animated animate__fadeInDown animate__slower animate__delay-1s"
+                    class="animate__animated animate__fadeInDown animate__delay-1s my-16"
+                />
+            </UContainer>
+        </section>
+        <section id="Projects"></section>
+        <section id="Contact"></section>
+    </div>
 </template>
 
 <script lang="ts" setup>
-const debounceCounter = ref(0);
-const actualCounter = ref(0);
 const { x, y } = useMouse();
-
-const debounce = useDebounce(() => {
-    debounceCounter.value++;
-}, 300)
-
-function debounceDemonstration() {
-    actualCounter.value++;
-    debounce();
-}
+const { width, height } = useWindowSize();
+const cornerOffsetX = computed(() =>
+    width.value > 1024 ? x.value / width.value : 0,
+);
+const cornerOffsetY = computed(() =>
+    width.value > 1024 ? y.value / height.value : 0,
+);
 </script>
+
+<style scoped>
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(24, 64px);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+}
+
+.b1 {
+    grid-area: 1 / 1 / 4 / 4;
+}
+.b2 {
+    grid-area: 4 / 1 / 10 / 4;
+}
+.b3 {
+    grid-area: 10 / 1 / 13 / 4;
+}
+.b4 {
+    grid-area: 13 / 1 / 16 / 4;
+}
+.b5 {
+    grid-area: 16 / 1 / 22 / 4;
+}
+.b6 {
+    grid-area: 22 / 1 / 25 / 4;
+}
+
+.bento-card {
+    @apply rounded-lg bg-gray-800 shadow transition hover:bg-gray-700;
+}
+
+@media screen and (min-width: 1280px) {
+    .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+    }
+
+    .b1 {
+        grid-area: 4 / 4 / 7 / 7;
+    }
+    .b2 {
+        grid-area: 1 / 1 / 7 / 4;
+    }
+    .b3 {
+        grid-area: 1 / 7 / 4 / 10;
+    }
+    .b4 {
+        grid-area: 1 / 4 / 4 / 7;
+    }
+    .b5 {
+        grid-area: 7 / 1 / 10 / 7;
+    }
+    .b6 {
+        grid-area: 4 / 7 / 10 / 10;
+    }
+}
+</style>
