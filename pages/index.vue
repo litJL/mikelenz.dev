@@ -18,62 +18,9 @@
                     >
                         <!-- 1 -->
                         <div
-                            class="animate__animated animate__fadeIn animate__delay-1s b1 bento-card center-card group z-10 flex flex-col items-center justify-between overflow-hidden xl:hover:scale-150 xl:hover:shadow-2xl"
+                            class="animate__animated animate__backInDown b1 bento-card animate__slow animate__delay-1s center-card group z-10 flex flex-col items-center justify-between overflow-hidden"
                         >
-                            <!-- Top -->
-                            <div
-                                class="flex h-8 w-full items-center justify-end opacity-0 transition group-hover:opacity-100"
-                            ></div>
-                            <!-- Center -->
-                            <div class="flex items-center justify-center">
-                                <div
-                                    class="flex flex-col items-center justify-center border-0 border-gray-500 transition-all group-hover:border-r-2 group-hover:pr-4"
-                                >
-                                    <span class="text-4xl font-bold">
-                                        MIKE LENZ
-                                    </span>
-                                    <span class="font-light text-gray-400">
-                                        WEB DEVELOPER
-                                    </span>
-                                </div>
-                                <div
-                                    class="w-0 overflow-hidden opacity-0 transition-all group-hover:w-auto group-hover:pl-4 group-hover:opacity-100"
-                                >
-                                    <ul>
-                                        <li>
-                                            <span class="text-gray-400">
-                                                Age:
-                                            </span>
-                                            <b>23</b>
-                                        </li>
-                                        <li>
-                                            <span class="text-gray-400">
-                                                Nationality:
-                                            </span>
-                                            <b>German</b>
-                                        </li>
-                                        <li>
-                                            <span class="text-gray-400">
-                                                Framework:
-                                            </span>
-                                            <b>Vue</b>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Bottom -->
-                            <div
-                                class="flex h-8 w-full justify-end bg-gradient-to-r from-transparent to-white opacity-0 transition-opacity group-hover:opacity-100"
-                            >
-                                <UButton
-                                    label="Contact Me! &rarr;"
-                                    to="#Contact"
-                                    variant="link"
-                                    size="xs"
-                                    color="white"
-                                    class="text-black"
-                                />
-                            </div>
+                            <CenterSection />
                         </div>
                         <!-- 2 -->
                         <div
@@ -100,7 +47,9 @@
                         <div
                             class="animate__animated animate__fadeInUp b5 bento-card"
                             style="animation-delay: 1.5s"
-                        ><ContactSection/></div>
+                        >
+                            <ContactSection />
+                        </div>
                         <!-- 6 -->
                         <div
                             class="animate__animated animate__fadeInRight b6 bento-card"
@@ -179,11 +128,12 @@
 <script lang="ts" setup>
 const { x, y } = useMouse();
 const { width, height } = useWindowSize();
+const hovered = ref(false);
 const cornerOffsetX = computed(() =>
-    width.value > 1024 ? x.value / width.value : 0,
+    width.value > 1280 ? x.value / width.value : 0.5,
 );
 const cornerOffsetY = computed(() =>
-    width.value > 1024 ? y.value / height.value : 0,
+    width.value > 1280 ? y.value / height.value : 0.5,
 );
 </script>
 
@@ -217,10 +167,6 @@ const cornerOffsetY = computed(() =>
 
 .bento-card {
     @apply rounded-lg bg-gray-800 shadow transition;
-}
-
-.center-card {
-    @apply hover:bg-gray-700;
 }
 
 @media screen and (min-width: 1280px) {
