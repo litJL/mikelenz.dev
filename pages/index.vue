@@ -7,7 +7,7 @@
             >
                 <!-- Bento Grid -->
                 <div
-                    class="animate__animated animate__fadeIn relative z-10 w-full xl:h-[800px]"
+                    class="animate__animated animate__fadeIn relative z-10 w-full xl:h-[900px]"
                 >
                     <!-- Actual Grid -->
                     <div
@@ -79,114 +79,34 @@
                         <div
                             class="animate__animated animate__fadeInLeft b2 bento-card"
                             style="animation-delay: 1.2s"
-                        ></div>
+                        >
+                            <AboutSection />
+                        </div>
                         <!-- 3 -->
                         <div
                             class="animate__animated animate__fadeInRight b3 bento-card"
                             style="animation-delay: 1.3s"
-                        ></div>
+                        >
+                            <OtherExperiences />
+                        </div>
                         <!-- 4 -->
                         <div
-                            class="animate__animated animate__fadeInDown b4 bento-card group relative flex flex-col overflow-hidden"
+                            class="animate__animated animate__fadeInDown b4 bento-card"
                             style="animation-delay: 1.4s"
                         >
-                            <!-- Card BG -->
-                            <div
-                                class="absolute left-0 top-0 flex h-full w-full flex-col justify-end"
-                            >
-                                <div
-                                    class="w-full rounded-lg bg-black transition-all group-hover:grow"
-                                ></div>
-                            </div>
-                            <UIcon
-                                name="i-heroicons-academic-cap-solid"
-                                class="absolute left-1/2 size-16 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100 transition-all group-hover:size-96 group-hover:opacity-5"
-                            />
-                            <div
-                                class="z-10 flex h-full w-full flex-col justify-between p-4 opacity-0 transition group-hover:opacity-100"
-                            >
-                                <div>
-                                    <h2
-                                        class="flex items-baseline text-4xl font-bold"
-                                    >
-                                        EDU & EXP
-                                        <div
-                                            class="h-1 grow rounded bg-gradient-to-r from-transparent to-white"
-                                        ></div>
-                                    </h2>
-                                    <p
-                                        class="mt-4 max-w-md text-lg text-gray-300"
-                                    >
-                                        I began coding in 2018 as part of my computer science education, which is nearing completion as I’m now in the final semester of my bachelor's degree.
-                                    </p>
-                                </div>
-                                <!-- stats -->
-                                <div
-                                    class="flex justify-end text-sm text-gray-500"
-                                >
-                                    <span>
-                                        Coding Experience:
-                                        <b>6 years</b>
-                                    </span>
-                                </div>
-                            </div>
+                            <EduSection />
                         </div>
                         <!-- 5 -->
                         <div
                             class="animate__animated animate__fadeInUp b5 bento-card"
                             style="animation-delay: 1.5s"
-                        ></div>
+                        ><ContactSection/></div>
                         <!-- 6 -->
                         <div
-                            class="animate__animated animate__fadeInRight b6 bento-card group relative flex flex-col overflow-hidden"
+                            class="animate__animated animate__fadeInRight b6 bento-card"
                             style="animation-delay: 1.6s"
                         >
-                            <!-- Card BG -->
-                            <div
-                                class="absolute left-0 top-0 flex h-full w-full flex-col justify-end"
-                            >
-                                <div
-                                    class="w-full rounded-lg bg-gradient-to-t from-[#3db684] to-[#00DC82] transition-all group-hover:grow"
-                                ></div>
-                            </div>
-                            <img
-                                :src="'/nuxt.svg'"
-                                alt="nuxt logo"
-                                class="absolute left-1/2 top-1/2 w-16 -translate-x-1/2 -translate-y-1/2 opacity-100 transition-all group-hover:w-96 group-hover:opacity-20"
-                            />
-                            <div
-                                class="z-10 flex h-full w-full flex-col justify-between p-4 opacity-0 transition group-hover:opacity-100"
-                            >
-                                <div>
-                                    <h2
-                                        class="flex items-baseline text-6xl font-bold"
-                                    >
-                                        NUXT
-                                        <div
-                                            class="h-1 grow rounded bg-gradient-to-r from-transparent to-white"
-                                        ></div>
-                                    </h2>
-                                    <p
-                                        class="mt-4 max-w-md text-lg text-emerald-100"
-                                    >
-                                        Since early 2023 I have been using Nuxt
-                                        for almost every project of mine. It has
-                                        quickly become my main framework because
-                                        of the impeccable DX and its approach to
-                                        a complete web solution.
-                                    </p>
-                                </div>
-                                <!-- stats -->
-                                <div
-                                    class="flex justify-end text-sm text-emerald-100"
-                                >
-                                    <span>
-                                        Experience:
-                                        <b>almost 2 years</b>
-                                    </span>
-                                </div>
-                                
-                            </div>
+                            <NuxtSection />
                         </div>
                     </div>
                     <!-- Details -->
